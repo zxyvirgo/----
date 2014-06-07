@@ -13,8 +13,8 @@ public class TestFour {
 
 	@Test
 	public void test() throws NumberFormatException, IOException {
-		//Ö±½ÓÔÚ¿ØÖÆÌ¨ÏÔÊ¾µÄ·½·¨×ö²âÊÔ£¬¸Ğ¾õĞ´ÆäËü·½·¨ÓĞµã¸´ÔÓÁË¡£
-		System.out.print("ÇëÊäÈëÒ»¸ö×ÔÈ»Êı£º");
+		//ç›´æ¥åœ¨æ§åˆ¶å°æ˜¾ç¤ºçš„æ–¹æ³•åšæµ‹è¯•ï¼Œæ„Ÿè§‰å†™å…¶å®ƒæ–¹æ³•æœ‰ç‚¹å¤æ‚äº†ã€‚
+		System.out.print("è¯·è¾“å…¥ä¸€ä¸ªè‡ªç„¶æ•°ï¼š");
 		BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));	
 		int input= Integer.parseInt(stdin.readLine());
 		Four.Triangle(input);

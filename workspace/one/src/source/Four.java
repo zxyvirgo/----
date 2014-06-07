@@ -11,15 +11,15 @@ public class Four {
 	 */
 	public static void Triangle(int input){
 		for(int n=0; n<input+1;n++){
-			//Êä³öinput¸ö¿Õ¸ñ£¬µ«ÊÇÖğ²ã¼õÉÙ
+			//è¾“å‡ºinputä¸ªç©ºæ ¼ï¼Œä½†æ˜¯é€å±‚å‡å°‘
 			for(int j=0; j<input-n+1; j++){
 				System.out.print("  ");
 			}
 			
 			for(int k=1; k<=n+1; k++){
-				int up=1;			//¼ÇÂ¼·ÖÄ¸
-				int down=1;			//¼ÇÂ¼·Ö×Ó
-				//¸ù¾İÑî»ÔÈı½ÇµÄ¹«Ê½£¬ÓÃ¼ÆËã»úµÄĞÎÊ½±íÊ¾³ö¹«Ê½
+				int up=1;			//è®°å½•åˆ†æ¯
+				int down=1;			//è®°å½•åˆ†å­
+				//æ ¹æ®æ¨è¾‰ä¸‰è§’çš„å…¬å¼ï¼Œç”¨è®¡ç®—æœºçš„å½¢å¼è¡¨ç¤ºå‡ºå…¬å¼
 				for(int m=n; m>n-k+1; m--){
 					up*=m;
 				}
@@ -30,7 +30,7 @@ public class Four {
 				int num = up/down;
 			
 			//	System.out.print(num+" ");
-				//Ìí¼ÓÁË¸ñÊ½£¬ÕâÑùÊä³öµÄ¾Í²»ÊÇĞ±Èı½ÇĞÎÁË.
+				//æ·»åŠ äº†æ ¼å¼ï¼Œè¿™æ ·è¾“å‡ºçš„å°±ä¸æ˜¯æ–œä¸‰è§’å½¢äº†.
 				System.out.printf("%4d",num);   
 
 			}

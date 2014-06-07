@@ -11,7 +11,7 @@ public class TestThree {
 	@Test
 	public void test() {
 		
-		//¸ù¾İÌâÄ¿µÄÑù×Ó¹¹½¨µÄ¶ş²æÊ÷£¬ÒÔ¼°¸ù¾İÌâÄ¿ÒªÇóĞ´µÄ²âÊÔ·½·¨£¬
+		//æ ¹æ®é¢˜ç›®çš„æ ·å­æ„å»ºçš„äºŒå‰æ ‘ï¼Œä»¥åŠæ ¹æ®é¢˜ç›®è¦æ±‚å†™çš„æµ‹è¯•æ–¹æ³•ï¼Œ
 		Three three = new Three();
 		
 		TNode root = new TNode();
@@ -30,6 +30,12 @@ public class TestThree {
 		h.setValue("H");
 		c.setValue("C");
 		f.setValue("F");
+		
+		/*                 A
+		 				B     D
+		 *
+		 *			G    H   C   F   
+		 */
 
 		root.setLeft(b);
 		root.setRight(d);
@@ -42,7 +48,7 @@ public class TestThree {
 		three.TreeLevel(root, 2);
 		three.TreeLevel(root, 3);
 
-    //ÏÂÃæÕâÕâÖÖ²âÊÔ·½Ê½²»ÊÇºÜºÃÊµÏÖ£¬ÒòÎªµÚµİ¹é£¬Èç¹ûĞ´³ÉÕâÑùÖ»»á¸ü¸´ÔÓ.
+    //ä¸‹é¢è¿™è¿™ç§æµ‹è¯•æ–¹å¼ä¸æ˜¯å¾ˆå¥½å®ç°ï¼Œå› ä¸ºç¬¬é€’å½’ï¼Œå¦‚æœå†™æˆè¿™æ ·åªä¼šæ›´å¤æ‚
 	//	Assert.assertEquals("ABDGHCF",Three.TreeLevel(root, 3));
 	}
 
