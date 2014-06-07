@@ -30,7 +30,8 @@ public class Four {
 				int num = up/down;
 			
 			//	System.out.print(num+" ");
-				System.out.printf("%4d",num);
+				//添加了格式，这样输出的就不是斜三角形了.
+				System.out.printf("%4d",num);   
 
 			}
 			

@@ -37,7 +37,7 @@ public class One {
 			}
 
 			for (int j = len - i - 1; j > 0; j--) {
-				num *= 16;
+				num *= 16;	
 			}
 			result += num; // 将得到的结果累加
 			endResult = Integer.toString(result);

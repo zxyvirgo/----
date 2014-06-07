@@ -10,6 +10,8 @@ public class TestThree {
 
 	@Test
 	public void test() {
+		
+		//根据题目的样子构建的二叉树，以及根据题目要求写的测试方法，
 		Three three = new Three();
 		
 		TNode root = new TNode();
@@ -40,7 +42,7 @@ public class TestThree {
 		three.TreeLevel(root, 2);
 		three.TreeLevel(root, 3);
 
-
+    //下面这这种测试方式不是很好实现，因为第递归，如果写成这样只会更复杂.
 	//	Assert.assertEquals("ABDGHCF",Three.TreeLevel(root, 3));
 	}
 
