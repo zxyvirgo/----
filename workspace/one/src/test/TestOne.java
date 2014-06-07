@@ -5,7 +5,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import source.One;
 
-
+/*junit的比较常规的测试
+*/
 public class TestOne {
 
 	@Test

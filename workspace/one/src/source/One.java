@@ -11,15 +11,15 @@ public class One {
 
 		String number = input, endResult = "";
 		int num, result = 0, flag = 0;
-		int len = number.length();
+		int len = number.length();	
 
 		for (int i = 0; i < len; i++) {
 
-			char c = number.charAt(i);
+			char c = number.charAt(i);	//通过执行方法获取的值，抽取出来，也能提高效率。因为number.charAt(i)本身的执行也需要时间。
 
 			if (c >= 'a' && c <= 'f') {
 
-				num = c - 87;// 取出一位数转换成十位数
+				num = c - 87;// 根据ASCII码，将数字转换成方便计算的数据，比如'a'对应ASCII里面的97，所以变成10方便后面的计算
 
 			} else if (c >= '0' && c <= '9') {
 
