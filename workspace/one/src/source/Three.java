@@ -8,7 +8,18 @@ public class Three {
 	 * @param args
 	 */
 
-	 
+	public TNode makeBinaryTreeByArray(String[] array,int index){
+
+        if(index<array.length){
+            	String value=array[index];
+                TNode t=new TNode();
+                t.value = value;
+                t.left=makeBinaryTreeByArray(array,index*2+1);
+                t.right=makeBinaryTreeByArray(array,index*2+2);
+                return t;
+        }
+        return null;
+    }
 	/*通过递归的方式，只会读取到指定的层。
 	 */
 	 

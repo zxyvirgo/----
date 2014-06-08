@@ -12,24 +12,7 @@ public class TestThree {
 	public void test() {
 		
 		//根据题目的样子构建的二叉树，以及根据题目要求写的测试方法，
-		Three three = new Three();
-		
-		TNode root = new TNode();
-		TNode b = new TNode();
-
-		TNode d = new TNode();
-		TNode g = new TNode();
-		TNode h = new TNode();
-		TNode c = new TNode();
-		TNode f = new TNode();
-
-		root.setValue("A");
-		b.setValue("B");
-		d.setValue("D");
-		g.setValue("G");
-		h.setValue("H");
-		c.setValue("C");
-		f.setValue("F");
+	
 		
 		/*                 A
 		 				B     D
@@ -37,17 +20,14 @@ public class TestThree {
 		 *			G    H   C   F   
 		 */
 
-		root.setLeft(b);
-		root.setRight(d);
-		b.setLeft(g);
-		b.setRight(h);
-		d.setLeft(c);
-		d.setRight(f);
 		
-		three.TreeLevel(root, 1);
-		three.TreeLevel(root, 2);
-		three.TreeLevel(root, 3);
-
+		Three tree = new Three();
+		String[] array ={"A", "B", "D", "G", "H", "C", "F"};	
+		TNode node = tree.makeBinaryTreeByArray(array, 0);
+		//二叉树的层次遍历
+		tree.TreeLevel(node, 1);
+		tree.TreeLevel(node, 2);
+		tree.TreeLevel(node, 3);
     //下面这这种测试方式不是很好实现，因为第递归，如果写成这样只会更复杂
 	//	Assert.assertEquals("ABDGHCF",Three.TreeLevel(root, 3));
 	}
