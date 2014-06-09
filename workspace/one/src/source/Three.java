@@ -20,9 +20,8 @@ public class Three {
         }
         return null;
     }
-	/*通过递归的方式，只会读取到指定的层。
-	 */
-	 
+	
+	// 通过递归的方式，读取到指定的层。
 	public void TreeLevel(TNode tree, int n) {
 
 		if(tree == null)

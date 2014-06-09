@@ -1,12 +1,6 @@
 package source;
 
 public class One {
-
-	/*
-	 * One
-	 * 
-	 * Date
-	 */
 	public static String HexToDec(String input) {
 
 		String number = input, endResult = "";
@@ -14,12 +8,12 @@ public class One {
 		int len = number.length();	
 
 		for (int i = 0; i < len; i++) {
-
-			char c = number.charAt(i);	//通过执行方法获取的值，抽取出来，也能提高效率。因为number.charAt(i)本身的执行也需要时间。
+			//通过执行方法获取的值，抽取出来，也能提高效率。因为number.charAt(i)本身的执行也需要时间。
+			char c = number.charAt(i);	
 
 			if (c >= 'a' && c <= 'f') {
-
-				num = c - 87;// 根据ASCII码，将数字转换成方便计算的数据，比如'a'对应ASCII里面的97，所以变成10方便后面的计算
+				// 根据ASCII码，将数字转换成方便计算的数据，比如'a'对应ASCII里面的97，所以变成10方便后面的计算。
+				num = c - 87;
 
 			} else if (c >= '0' && c <= '9') {
 
@@ -39,7 +33,9 @@ public class One {
 			for (int j = len - i - 1; j > 0; j--) {
 				num *= 16;	
 			}
-			result += num; // 将得到的结果累加
+			// 将得到的结果累加。
+			result += num; 
+			//将结果转换成字符串，返回最后的值。
 			endResult = Integer.toString(result);
 		}
 		if (flag == 1) {

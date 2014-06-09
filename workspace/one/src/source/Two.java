@@ -9,8 +9,8 @@ public class Two {
 	 * 
 	 * @throws IOException
 	 */
-	/*这是更新以后的方法，因为之前写的效率太低，其实没有必要将数据copy到新的空间，
-	 * 只需要记录它的位置就可以了
+	/* 这是更新以后的方法，因为之前写的效率太低，其实没有必要将数据copy到新的空间，
+	 * 只需要记录它的位置就可以了.
 	 */
 	public static String XfindTheLength(String input) {
 		byte[] in = input.getBytes();
@@ -53,7 +53,7 @@ public class Two {
 			maxoffset = offset;
 		}
 
-		byte[] slice = new byte[maxlen]; // byte存储的是字节，对于已经知道长度的串，这样使用更快
+		byte[] slice = new byte[maxlen]; // byte存储的是字节，对于已经知道长度的串，这样使用比String效率高
 		for (int j = maxoffset, k = 0; k < maxlen; j++) {
 			if (in[j] >= 48 && in[j] <= 57) {
 				slice[k++] = in[j];

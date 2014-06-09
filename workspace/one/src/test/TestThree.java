@@ -28,8 +28,9 @@ public class TestThree {
 		tree.TreeLevel(node, 1);
 		tree.TreeLevel(node, 2);
 		tree.TreeLevel(node, 3);
-    //下面这这种测试方式不是很好实现，因为第递归，如果写成这样只会更复杂
-	//	Assert.assertEquals("ABDGHCF",Three.TreeLevel(root, 3));
+		
+        //下面这这种测试方式不是很好实现，因为第递归，如果写成这样只会更复杂
+	    //Assert.assertEquals("ABDGHCF",Three.TreeLevel(root, 3));
 	}
 
 }

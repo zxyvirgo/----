@@ -17,8 +17,8 @@ public class Four {
 			}
 			
 			for(int k=1; k<=n+1; k++){
-				int up=1;			//记录分母
-				int down=1;			//记录分子
+				int up=1;			//记录分子
+				int down=1;			//记录分母
 				//根据杨辉三角的公式，用计算机的形式表示出公式
 				for(int m=n; m>n-k+1; m--){
 					up*=m;
@@ -29,7 +29,6 @@ public class Four {
 				}
 				int num = up/down;
 			
-			//	System.out.print(num+" ");
 				//添加了格式，这样输出的就不是斜三角形了.
 				System.out.printf("%4d",num);   
 

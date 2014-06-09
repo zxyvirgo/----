@@ -5,14 +5,14 @@ import org.junit.Test;
 
 import source.Two;
 
-/*本题可以添加一些额外的jar，使用一些性能测试框架，但因不是maven工程，感觉不是很方便，就用代码做一下简单测试
+/*本题可以添加一些额外的jar，使用一些性能测试框架，但是本例就用代码做一下简单测试
  */
 public class TestTwo {
 
 	@Test
 	public void test() {
 		
-		//可以做性能测试来对比下面两个函数执行所花的时间
+		//可以做性能测试来对比下面两个函数执行所花的时间，被注释掉的是之前写的方法
 		
 	/*	Assert.assertEquals("11111178899",Two.findTheLength("a111111A788990hjko005678899"));
 		Assert.assertEquals("11111111158999",Two.findTheLength("a1111111115A899900006666A"));
