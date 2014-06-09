@@ -11,11 +11,11 @@ public class TestThree {
 	@Test
 	public void test() {
 		
-		//根据题目的样子构建的二叉树，以及根据题目要求写的测试方法，
+		//根据题目的样子构建的二叉树，选取题目中的数据测试
 	
-		
-		/*                 A
-		 				B     D
+		/*  
+		 *                 A
+		 *          	B     D
 		 *
 		 *			G    H   C   F   
 		 */
@@ -25,11 +25,14 @@ public class TestThree {
 		String[] array ={"A", "B", "D", "G", "H", "C", "F"};	
 		TNode node = tree.makeBinaryTreeByArray(array, 0);
 		//二叉树的层次遍历
+		//遍历第1层
 		tree.TreeLevel(node, 1);
+		//遍历第2层
 		tree.TreeLevel(node, 2);
+		//遍历第3层
 		tree.TreeLevel(node, 3);
 		
-        //下面这这种测试方式不是很好实现，因为第递归，如果写成这样只会更复杂
+        //因为是递归，写成下面这样的测试方法没有很大的必要性
 	    //Assert.assertEquals("ABDGHCF",Three.TreeLevel(root, 3));
 	}
 
