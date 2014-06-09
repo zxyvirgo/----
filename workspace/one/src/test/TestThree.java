@@ -15,9 +15,8 @@ public class TestThree {
 	
 		/*  
 		 *                 A
-		 *          	B     D
-		 *
-		 *			G    H   C   F   
+		 *               B     D
+		 *           G    H   C   F   
 		 */
 
 		
@@ -33,7 +32,7 @@ public class TestThree {
 		tree.TreeLevel(node, 3);
 		
         //因为是递归，写成下面这样的测试方法没有很大的必要性
-	    //Assert.assertEquals("ABDGHCF",Three.TreeLevel(root, 3));
+        //Assert.assertEquals("ABDGHCF",Three.TreeLevel(root, 3));
 	}
 
 }
