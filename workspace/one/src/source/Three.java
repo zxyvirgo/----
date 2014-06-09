@@ -7,7 +7,7 @@ public class Three {
 	/**
 	 * @param args
 	 */
-
+	//用数组构建二叉树
 	public TNode makeBinaryTreeByArray(String[] array,int index){
 
         if(index<array.length){
