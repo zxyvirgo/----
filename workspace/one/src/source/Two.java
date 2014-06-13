@@ -16,7 +16,11 @@ public class Two {
 		byte[] in = input.getBytes();
 		int len = in.length;
 		//pos用来记录不断增加的串的长度，offset用来记录查找的串的起始位置
-		int maxlen = 0, max = 0, pos = 0, offset = 0, maxoffset = 0;
+		int maxlen = 0;
+		int max = 0;
+		int pos = 0;
+		int offset = 0;
+		int maxoffset = 0;
 
 		for (int i = 0; i < len; i++) {
 

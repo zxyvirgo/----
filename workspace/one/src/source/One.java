@@ -3,8 +3,11 @@ package source;
 public class One {
 	public static String HexToDec(String input) {
 
-		String number = input, endResult = "";
-		int num, result = 0, flag = 0;
+		String number = input;
+		String endResult = "";
+		int num;
+		int result = 0;
+		int flag = 0;
 		int len = number.length();	
 
 		for (int i = 0; i < len; i++) {
@@ -36,7 +39,7 @@ public class One {
 			// 将得到的结果累加。
 			result += num; 
 			//将结果转换成字符串，返回最后的值。
-			endResult = Integer.toString(result);
+			endResult = String.valueOf(result);
 		}
 		if (flag == 1) {
 			endResult = "Sorry!the number you put is wrong!";
