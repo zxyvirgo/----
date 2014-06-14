@@ -5,21 +5,27 @@ import java.io.IOException;
 public class Four {
 
 	/**
-	 * @param args
+	 * @param input 
+	 *         the input is to record the number of spaces,and it is reduce by layer
+	 * @param up
+	 *         the up is to record the numerator
+	 * @param down 
+	 *         the down is to record the denominator
+	 *         we can calculate the equation of Pascal's Triangle 
 	 * @throws NumberFormatException 
 	 * @throws IOException 
+	 * 
+	 * at last we need to use the specification format
 	 */
 	public static void Triangle(int input){
 		for(int n=0; n<input+1;n++){
-			//输出input个空格，但是逐层减少
 			for(int j=0; j<input-n+1; j++){
 				System.out.print("  ");
 			}
 			
 			for(int k=1; k<=n+1; k++){
-				int up=1;			//记录分子
-				int down=1;			//记录分母
-				//根据杨辉三角的公式，用计算机的形式表示出公式
+				int up=1;			
+				int down=1;			
 				for(int m=n; m>n-k+1; m--){
 					up*=m;
 				}
@@ -28,8 +34,7 @@ public class Four {
 					down*=i;	
 				}
 				int num = up/down;
-			
-				//添加了格式，这样输出的就不是斜三角形了.
+				
 				System.out.printf("%4d",num);   
 
 			}

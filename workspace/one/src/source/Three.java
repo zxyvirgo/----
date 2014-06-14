@@ -2,12 +2,16 @@ package source;
 
 
 
+/**
+ * @author asus
+ *
+ */
 public class Three {
 
 	/**
 	 * @param args
+	 * make a BinaryTree
 	 */
-	//用数组构建二叉树
 	public TNode makeBinaryTreeByArray(String[] array,int index){
 
         if(index<array.length){
@@ -21,7 +25,11 @@ public class Three {
         return null;
     }
 	
-	// 通过递归的方式，读取到指定的层。
+	/**
+	 * @param tree
+	 * @param n
+	 * read it by layer
+	 */
 	public void TreeLevel(TNode tree, int n) {
 
         if(tree == null)

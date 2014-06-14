@@ -8,56 +8,59 @@ public class Two {
 	 * @param args
 	 * 
 	 * @throws IOException
-	 */
-	/* 这是更新以后的方法，因为之前写的效率太低，其实没有必要将数据copy到新的空间，
-	 * 只需要记录它的位置就可以了.
-	 */
+	 * this is the new method
+	 * @param offset
+	 *       to record the length of the String which i found
+	 * @param pos 
+	 *       to record the begin position of the String
+	 * @param max 
+	 *       to record the number of change
+ 	 */
 	public static String XfindTheLength(String input) {
 		byte[] in = input.getBytes();
 		int len = in.length;
-		//pos用来记录不断增加的串的长度，offset用来记录查找的串的起始位置
 		int maxlen = 0;
 		int max = 0;
-		int pos = 0;
 		int offset = 0;
+		int pos = 0;
 		int maxoffset = 0;
 
 		for (int i = 0; i < len; i++) {
 
-			if (in[i] >= 48 && in[i] <= 57) {	//过滤非'0'-'9'的数字
+			if (in[i] >= 48 && in[i] <= 57) {	//filter the number except '0'-'9'
 
-				if (pos == 0) {
+				if (offset == 0) {
 
-					offset = i;		//记录下第一个偏移位置，作为起始点
+					pos = i;		
 				}
 
-				if (in[i] >= max) { //判断
+				if (in[i] >= max) { //judge if the String is increasing
 
-					pos++;
-					max = in[i];	//满足增长的串长，pos就不断增加，max记录前一个字符，用来比较
+					offset++;
+					max = in[i];	
 					
 				} else {
-					if (pos > maxlen) {	//如果新找到的串长大于前一次，那么就记录新串的长度和起始位置
+					if (offset > maxlen) {	//if the String is long than the first record,replace it.
 
-						maxlen = pos;
-						maxoffset = offset;
+						maxlen = offset;
+						maxoffset = pos;
 					}
 
 					max = 0;
-					pos = 0;
+					offset = 0;
 
 				}
 
 			}
 
 		}
-		if (pos > maxlen) {		//如果末尾是递增数字，最后可能不会进入判断里面的else语句，所以还要比较一次
+		if (offset > maxlen) {		//if the end of the String is number,we need to compare the last time.
 
-			maxlen = pos;
-			maxoffset = offset;
+			maxlen = offset;
+			maxoffset = pos;
 		}
 
-		byte[] slice = new byte[maxlen]; // byte存储的是字节，对于已经知道长度的串，这样使用比String效率高
+		byte[] slice = new byte[maxlen]; // using byte is better than String
 		for (int j = maxoffset, k = 0; k < maxlen; j++) {
 			if (in[j] >= 48 && in[j] <= 57) {
 				slice[k++] = in[j];

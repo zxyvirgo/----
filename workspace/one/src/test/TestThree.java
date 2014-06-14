@@ -11,7 +11,7 @@ public class TestThree {
 	@Test
 	public void test() {
 		
-		//根据题目的样子构建的二叉树，选取题目中的数据测试
+		//this is the test data
 	
 		/*  
 		 *                 A
@@ -23,15 +23,14 @@ public class TestThree {
 		Three tree = new Three();
 		String[] array ={"A", "B", "D", "G", "H", "C", "F"};	
 		TNode node = tree.makeBinaryTreeByArray(array, 0);
-		//二叉树的层次遍历
-		//遍历第1层
+		//traverse the first layer
 		tree.TreeLevel(node, 1);
-		//遍历第2层
+		//traverse the second layer
 		tree.TreeLevel(node, 2);
-		//遍历第3层
+		//traverse the third layer
 		tree.TreeLevel(node, 3);
 		
-        //因为是递归，写成下面这样的测试方法没有很大的必要性
+        //using this method may be not very nessary. 
         //Assert.assertEquals("ABDGHCF",Three.TreeLevel(root, 3));
 	}
 
